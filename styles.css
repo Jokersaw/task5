@@ -153,19 +153,6 @@ h3::first-letter
     }
 }
 
-@media print
-{
-    .running-text-container
-    {
-        display: none;
-    }
-
-    body
-    {
-        font-size: 9.5pt;
-    }
-}
-
 @page
 {
     size: A4 portrait;
@@ -211,7 +198,6 @@ h3::first-letter
     column-rule: 1px solid #D3D3D3;
     overflow-wrap: break-word;
 }
-
 
 .snowflake
 {
