@@ -1,0 +1,304 @@
+body
+{
+    background-color: #5a0808;
+    color: #1b1c1e;
+    font-family: 'Press Start 2P', sans-serif;
+}
+
+header
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.title-container
+{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.logo-img
+{
+    width: 5vw;
+    height: auto;
+    max-width: 70px;
+}
+
+.title-container .title
+{
+    font-size: clamp(16px, 3vw, 40px);
+    color: #fecd1a;
+    text-transform: uppercase;
+    text-shadow: 4px clamp(2px, 0.3vw, 4px) 0px #4b5320;
+    margin-bottom: 3px;
+}
+
+.title-container .subtitle
+{
+    font-family: 'MultiTypeGamer';
+    font-size: clamp(10px, 2vw, 30px);
+    color: #c59f13;
+    text-transform: lowercase;
+    margin-top: 0;
+}
+
+p
+{
+    font-size: clamp(10px, 1vw, 20px);
+}
+
+h3
+{
+    font-size: clamp(16px, 2vw, 30px);
+}
+
+h3::first-letter
+{
+    font-size: 2em;
+    float: left;
+    padding-right: 5px;
+    color: #fecd1a;
+    text-shadow: 4px clamp(2px, 0.3vw, 4px) 0px #4b5320;
+}
+
+.newspaper
+{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-gap: 20px;
+    padding: 20px;
+    margin: 0 auto;
+    max-width: 100%;
+}
+
+.post-column
+{
+    grid-column: 1 / span 1;
+    grid-row: 1 / span 2;
+}
+
+.post-row
+{
+    grid-column: 2 / span 1;
+    grid-row: auto;
+}
+
+.flex-row
+{
+    display: flex;
+
+}
+
+.flex-column
+{
+    display: flex;
+    flex-direction: column;
+}
+
+@media (max-width: 1200px)
+{
+    .newspaper
+    {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .post-column
+    {
+        grid-column: 1 / span 1;
+    }
+
+    .post-row
+    {
+        grid-column: 2 / span 1;
+    }
+}
+
+@media (max-width: 768px)
+{
+    .newspaper
+    {
+        grid-template-columns: 1fr;
+    }
+
+    .post-column
+    {
+        grid-column: 1;
+    }
+
+    .post-row
+    {
+        grid-column: 1;
+    }
+}
+
+@keyframes scroll-down
+{
+    0%
+    {
+        top: -100%;
+        opacity: 0;
+    }
+
+    10%
+    {
+        opacity: 1;
+    }
+
+    100%
+    {
+        top: 100%;
+    }
+}
+
+@media print
+{
+    .running-text-container
+    {
+        display: none;
+    }
+
+    body
+    {
+        font-size: 9.5pt;
+    }
+}
+
+@page
+{
+    size: A4 portrait;
+    margin: 0;
+}
+
+@font-face
+{
+    font-family: 'Press Start 2P';
+    src: url('sources/fonts/PressStart2P.ttf') format('truetype');
+}
+
+@font-face
+{
+    font-family: 'MultiTypeGamer';
+    src: url('sources/fonts/MultiTypeGamer.otf') format('truetype');
+}
+
+.post
+{
+    background-color: #fff8dc;
+    padding: 20px;
+    border: 1px solid #d3d3d3;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.gif-beer
+{
+    width: 100%;
+    height: auto;
+}
+
+.gif-snitch
+{
+    align-self: flex-start;
+    max-width: 15%;
+}
+
+.column-text
+{
+    column-width: 200px;
+    column-gap: 20px;
+    column-rule: 1px solid #D3D3D3;
+    overflow-wrap: break-word;
+}
+
+
+.snowflake
+{
+    position: absolute;
+    top: -10px;
+    background-color: white;
+    width: 8px;
+    height: 8px;
+    box-shadow: 0 0 2px rgba(255, 255, 255, 0.8);
+    opacity: 0.8;
+    animation: fall linear infinite;
+}
+
+@keyframes fall
+{
+    0%
+    {
+        transform: translateY(0) rotate(0deg);
+        opacity: 0.8;
+    }
+
+    100%
+    {
+        transform: translateY(100vh) rotate(360deg);
+        opacity: 0.1;
+    }
+}
+
+.snowflake:nth-child(1)
+{
+    left: 10%;
+    animation-duration: 10s;
+    animation-delay: 0s;
+}
+
+.snowflake:nth-child(2)
+{
+    left: 20%;
+    animation-duration: 12s;
+    animation-delay: 1s;
+}
+
+.snowflake:nth-child(3)
+{
+    left: 30%;
+    animation-duration: 8s;
+    animation-delay: 2s;
+}
+
+.snowflake:nth-child(4)
+{
+    left: 40%;
+    animation-duration: 14s;
+    animation-delay: 1s;
+}
+
+.snowflake:nth-child(5)
+{
+    left: 50%;
+    animation-duration: 9s;
+    animation-delay: 0.5s;
+}
+
+.snowflake:nth-child(6)
+{
+    left: 60%;
+    animation-duration: 11s;
+    animation-delay: 2.5s;
+}
+
+.snowflake:nth-child(7)
+{
+    left: 70%;
+    animation-duration: 15s;
+    animation-delay: 1.5s;
+}
+
+.snowflake:nth-child(8)
+{
+    left: 80%;
+    animation-duration: 10s;
+    animation-delay: 0.5s;
+}
+
+.snowflake:nth-child(9)
+{
+    left: 90%;
+    animation-duration: 13s;
+    animation-delay: 3s;
+}
