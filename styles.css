@@ -2,7 +2,8 @@ body
 {
     background-color: #5a0808;
     color: #1b1c1e;
-    font-family: 'Press Start 2P', sans-serif;
+    font-family: "Press Start 2P", sans-serif;
+    font-size: large;
 }
 
 header
@@ -29,7 +30,7 @@ header
 
 .title-container .title
 {
-    font-size: 2.5em;
+    font-size: 2em;
     color: #fecd1a;
     text-transform: uppercase;
     text-shadow: 0.1em 0.05em 0 #4b5320;
@@ -38,8 +39,8 @@ header
 
 .title-container .subtitle
 {
-    font-family: 'MultiTypeGamer';
-    font-size: 1.5em;
+    font-family: "MultiTypeGamer";
+    font-size: 1.3em;
     color: #c59f13;
     text-transform: lowercase;
     margin-top: 0;
@@ -47,17 +48,17 @@ header
 
 p
 {
-    font-size: 1.2em;
+    font-size: 1em;
 }
 
 h3
 {
-    font-size: 1.8em;
+    font-size: 1.5em;
 }
 
 h3::first-letter
 {
-    font-size: 2em;
+    font-size: 1.8em;
     float: left;
     padding-right: 5px;
     color: #fecd1a;
@@ -89,7 +90,6 @@ h3::first-letter
 .flex-row
 {
     display: flex;
-
 }
 
 .flex-column
@@ -100,6 +100,11 @@ h3::first-letter
 
 @media (max-width: 1200px)
 {
+    body
+    {
+        font-size: medium;
+    }
+
     .newspaper
     {
         grid-template-columns: repeat(2, 1fr);
@@ -118,6 +123,11 @@ h3::first-letter
 
 @media (max-width: 768px)
 {
+    body
+    {
+        font-size: small;
+    }
+
     .newspaper
     {
         grid-template-columns: 1fr;
@@ -161,14 +171,14 @@ h3::first-letter
 
 @font-face
 {
-    font-family: 'Press Start 2P';
-    src: url('sources/fonts/PressStart2P.ttf') format('truetype');
+    font-family: "Press Start 2P";
+    src: url("sources/fonts/PressStart2P.ttf") format("truetype");
 }
 
 @font-face
 {
-    font-family: 'MultiTypeGamer';
-    src: url('sources/fonts/MultiTypeGamer.otf') format('truetype');
+    font-family: "MultiTypeGamer";
+    src: url("sources/fonts/MultiTypeGamer.otf") format("truetype");
 }
 
 .post
@@ -195,7 +205,7 @@ h3::first-letter
 {
     column-width: 200px;
     column-gap: 20px;
-    column-rule: 1px solid #D3D3D3;
+    column-rule: 1px solid #d3d3d3;
     overflow-wrap: break-word;
 }
 
